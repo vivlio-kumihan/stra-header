@@ -17,19 +17,20 @@ body {
 }
 
 .site-header-wapper,
-.nav-wapper {
+.global-nav>.nav-wapper {
   display: flex;
   align-items: center;
 }
 
-.site-header-wapper {
-  justify-content: space-between;
-}
-
-.site-header > .container {
+.site-header>.container {
   max-width: 1050px;
   margin: 0 auto;
   padding: 1.25rem 2rem;
+}
+
+.site-header>.container {
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 .brand {
@@ -38,19 +39,28 @@ body {
   font-weight: 900;
 }
 
+.global-nav {
+  flex: 1;
+}
+
 .global-nav a {
+  display: block;
+
+  padding: 0 1rem;
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #555;
 }
 
-.nav-item:not(:first-of-type) {
-  margin-left: 1rem;
+@media screen and (min-width: 600px) {
+  .justify-end {
+    margin-left: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .nav-wapper {
+  .global-nav>.nav-wapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,7 +72,8 @@ body {
     left: 0;
     right: 0;
 
-    background-color: rgb(90, 190, 150); 
+    padding: 1.5rem 1rem;
+    background-color: rgb(90, 190, 150);
     z-index: -1;
     visibility: hidden;
     opacity: 0;
@@ -70,14 +81,13 @@ body {
   }
 
   .nav-wapper.active {
-    padding-top: 2rem;
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
   }
 
-  .nav-wapper > .nav-item {
-    margin: 0 0 2rem 2rem;
+  .nav-item:not(:first-of-type) {
+    padding-top: 1.5rem;
   }
 }
 
