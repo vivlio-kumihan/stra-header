@@ -14,23 +14,34 @@
   <script src="./assets/js/behavior.js" defer></script>
 </head>
 
-<header class="site-header">
-  <div class="container site-header-wapper">
-    <a href="#" class="brand">kumihan.com</a>
-    <nav class="global-nav">
-      <button class="toggle-btn" aria-expanded="false" type="button">menu</button>
-      <ul class="nav-wapper">
-        <li class="nav-item"><a href="#">home</a></li>
-        <li class="nav-item"><a href="#">about</a></li>
-        <li class="nav-item justify-end"><a href="#">services</a></li>
-        <li class="nav-item"><a href="#">works</a></li>
-        <li class="nav-item"><a href="#">contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
 <body>
+  <header class="site-header">
+    <div class="site-header-wapper container">
+      <div id="brand">
+        <a href="#" id="brand-image">kumihan.com</a>
+      </div>
+      <nav class="global-nav">
+        <button class="toggle-btn" aria-expanded="false" type="button">menu</button>
+        <ul class="nav-wapper">
+          <li class="nav-item"><a href="#">home</a></li>
+          <li class="nav-item"><a href="#">about</a></li>
+          <li class="nav-item justify-end"><a href="#">services</a></li>
+          <li class="nav-item"><a href="#">works</a></li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <form class="header-form" action="" method="post">
+          <dl>
+            <dt><label for="search"></label></dt>
+            <dd><input type="text" id="search" placeholder="サイト内検索"></dd>
+          </dl>
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+  </main>
 </body>
 
 </html>

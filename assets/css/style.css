@@ -17,49 +17,46 @@ body {
 }
 
 .site-header-wapper,
-.global-nav>.nav-wapper {
+.global-nav,
+.global-nav>.nav-wapper,
+.site-header dl {
   display: flex;
   align-items: center;
 }
 
-.site-header>.container {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 1.25rem 2rem;
+.site-header-wapper {
+  justify-content: space-between;
 }
 
 .site-header>.container {
-  max-width: 1050px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.brand {
+@media screen and (max-width: 599px) {
+  .site-header>.container {
+    padding: 1rem;
+  }
+}
+
+#brand-image {
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
 }
 
-.global-nav {
-  flex: 1;
-}
-
 .global-nav a {
   display: block;
 
-  padding: 0 1rem;
+  padding: 1.5rem 1rem;
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #555;
 }
 
-@media screen and (min-width: 600px) {
-  .justify-end {
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   .global-nav>.nav-wapper {
     display: flex;
     flex-direction: column;
@@ -93,22 +90,92 @@ body {
 
 .toggle-btn {
   display: none;
-
-  padding: .5rem .75rem;
-  font-size: .75rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgb(70, 70, 255);
-  border-radius: .3rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   .toggle-btn {
     display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 2rem;
+    right: 1rem;
+    padding: .5rem .75rem;
+    font-size: .75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(70, 70, 255);
+    border-radius: .3rem;
   }
+}
+
+.header-form {
+  margin-left: 1rem;
+}
+
+.header-form>dl {
+  flex-direction: row-reverse;
+}
+
+.header-form label::before {
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border-left: 1px solid #333;
+  padding: .5rem 0 .5rem 1rem;
+}
+
+@media screen and (max-width: 599px) {
+  .header-form label::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6rem;
+
+    padding: .5rem 1rem .5rem 0;
+    border: 0;
+    border-right: 1px solid #333;
+  }
+}
+
+.header-form input {
+  width: 22rem;
+  padding: .5rem;
+  background-color: #fff;
+}
+
+.header-form input:focus-visible {
+  outline: none;
+}
+
+@media screen and (max-width: 599px) {
+  .header-form input {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px dotted #333;
+  }
+}
+
+.header-form dd {
+  display: none;
+}
+
+.header-form dd.active {
+  display: contents;
+}
+
+@media screen and (max-width: 599px) {
+  .header-form dd.active {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+
+    width: 100%;
+    height: 5rem;
+    background-color: #eee;
+  }
+
 }
