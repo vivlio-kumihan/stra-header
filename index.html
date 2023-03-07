@@ -15,28 +15,30 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="site-header-wapper container">
-      <div id="brand">
-        <a href="#" id="brand-image">kumihan.com</a>
-      </div>
-      <nav class="global-nav">
-        <button class="toggle-btn" aria-expanded="false" type="button">menu</button>
-        <ul class="nav-wapper">
-          <li class="nav-item"><a href="#">home</a></li>
-          <li class="nav-item"><a href="#">about</a></li>
-          <li class="nav-item justify-end"><a href="#">services</a></li>
-          <li class="nav-item"><a href="#">works</a></li>
-          <li class="nav-item">
-          </li>
-        </ul>
-        <form class="header-form" action="" method="post">
+  <header id="site-header">
+    <div class="site-header_wapper container">
+      <div class="site-header_start">
+        <a href="#" class="brand-image">kumihan.com</a>
+        <form class="form_search" action="" method="post">
           <dl>
             <dt><label for="search"></label></dt>
-            <dd><input type="text" id="search" placeholder="サイト内検索"></dd>
+            <dd><input type="text" name="" id="header_search" placeholder="&#xf002 サイト内検索"></dd>
           </dl>
         </form>
-      </nav>
+      </div>
+      <div class="site-header_end">
+        <nav class="global-nav">
+          <button class="gnav_toggle" type="button">menu</button>
+          <ul class="gnav_wapper active">
+            <li><a class="nav_link home" href="#">home</a></li>
+            <li><a class="nav_link network" href="#">network</a></li>
+            <li><a class="nav_link jobs" href="#">jobs</a></li>
+            <li><a class="nav_link messages" href="#">messages</a></li>
+            <li><a class="nav_link nofitication" href="#">nofitication</a></li>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 

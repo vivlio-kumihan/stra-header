@@ -1,26 +1,18 @@
-const toggleBtn = document.querySelector(".toggle-btn")
-const navWrapper = document.querySelector(".nav-wapper")
-const toggleSearch = document.querySelector(".header-form dt")
-const headerSearch = document.querySelector(".header-form dd")
-console.log(toggleSearch)
-toggleBtn.addEventListener("click", function () {
-  if (navWrapper.classList.contains("active")) {
+const gnavToggle = document.querySelector(".gnav_toggle")
+const gnavWapper = document.querySelector(".gnav_wapper")
+const toggleSearch = document.querySelector(".form_search dt")
+const headerSearch = document.querySelector("#header_search")
+
+gnavToggle.addEventListener("click", function () {
+  if (gnavWapper.classList.contains("active")) {
     this.textContent = "menu"
-    navWrapper.classList.remove("active")
   } else {
     this.textContent = "close"
-    navWrapper.classList.add("active")
   }
+  gnavWapper.classList.toggle("active")
 })
 
 toggleSearch.addEventListener("click", () => {
-  if (headerSearch.classList.contains("active")) {
-    headerSearch.classList.remove("active")
-  } else {
-    headerSearch.classList.add("active")
-  }
+  headerSearch.classList.toggle("active")
+  headerSearch.setAttribute("placeholder", "サイト内検索")
 })
-
-// 意味を調べる
-// this.setAttribute("aria-expanded", "true or false");
-// this.setAttribute("aria-label", "menu or close menu");

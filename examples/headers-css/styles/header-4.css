@@ -24,15 +24,15 @@
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem; }
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     .site-header__wrapper {
       padding-top: 0;
       padding-bottom: 0; } }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .nav__wrapper {
     display: flex; } }
 
-@media (max-width: 799px) {
+@media (max-width: 599px) {
   .nav__wrapper {
     position: absolute;
     top: calc(100% + 35px);
@@ -56,7 +56,7 @@
   display: block;
   padding: 1rem;
   border-left: 4px solid transparent; }
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     .nav__item a {
       text-align: center;
       border-left: 0;
@@ -67,18 +67,18 @@
   width: 28px;
   height: 28px;
   margin-right: 1rem; }
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     .nav__item svg {
       display: block;
       margin: 0 auto 0.5rem; } }
 .nav__item.active a {
   border-left-color: #222; }
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     .nav__item.active a {
       border-bottom-color: #222; } }
 .nav__toggle {
   display: none; }
-  @media (max-width: 799px) {
+  @media (max-width: 599px) {
     .nav__toggle {
       display: block;
       position: absolute;
@@ -97,11 +97,11 @@
   background: url("../img/header-3/search.svg") center right/22px no-repeat;
   border: 0;
   display: none; }
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     .search__toggle {
       border-left: 1px solid #979797;
       padding-left: 10px; } }
-  @media (max-width: 799px) {
+  @media (max-width: 599px) {
     .search__toggle {
       position: absolute;
       right: 5.5rem;
@@ -111,7 +111,7 @@
   display: block; }
   .search__form.active {
     display: block; }
-  @media (max-width: 799px) {
+  @media (max-width: 599px) {
     .search__form {
       position: absolute;
       left: 0;
@@ -127,7 +127,7 @@
     border-radius: 0;
     font-size: 16px;
     padding: 0.5rem; }
-    @media (max-width: 799px) {
+    @media (max-width: 599px) {
       .search__form input {
         border-bottom: 1px solid #979797; } }
 .inactive-item {
