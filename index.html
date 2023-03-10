@@ -16,32 +16,47 @@
 
 <body>
   <header id="site-header">
-    <div class="site-header_wapper container">
-      <div class="site-header_start">
-        <a href="#" class="brand-image">kumihan.com</a>
-        <form class="form_search" action="" method="post">
-          <dl>
-            <dt><label for="search"></label></dt>
-            <dd><input type="text" name="" id="header_search" placeholder="&#xf002 サイト内検索"></dd>
-          </dl>
-        </form>
-      </div>
-      <div class="site-header_end">
-        <nav class="global-nav">
-          <button class="gnav_toggle" type="button">menu</button>
-          <ul class="gnav_wapper active">
-            <li><a class="nav_link home" href="#">home</a></li>
-            <li><a class="nav_link network" href="#">network</a></li>
-            <li><a class="nav_link jobs" href="#">jobs</a></li>
-            <li><a class="nav_link messages" href="#">messages</a></li>
-            <li><a class="nav_link nofitication" href="#">nofitication</a></li>
-            </li>
+    <div id="header_top">
+      <div class="container">
+        <div class="left-blockt">
+          <a href="" class="brand">kumihan.com</a>
+        </div>
+        <div class="right-block">
+          <ul>
+            <li><button class="more-info">お得情報</button></li>
           </ul>
-        </nav>
+        </div>
+      </div>
+    </div>
+    
+    <div id="header_bottom">
+      <div class="container">
+        <div class="left-block">
+          <div class="global-nav">
+            <button class="gnav_toggle">menu</button>
+            <ul>
+              <li class="nav_item"><a href="#" class="icon about">about</a></li>
+              <li class="nav_item"><a href="#" class="icon service">service</a></li>
+              <li class="nav_item"><a href="#" class="icon works">works</a></li>
+              <li class="nav_item"><a href="#" class="icon contact">contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-block">
+          <form action="" class="search_form" method="post">
+            <dl>
+              <dt><label class="search-icon_toggle" for="header-search"></label></dt>
+              <dd><input id="header-search_input" type="text" name="" placeholder="サイト内検索"></dd>
+            </dl>
+          </form>
+          <ul>
+            <li><a href="#" class="icon cart"></a></li>
+            <li><a href="#" class="icon member-page"></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
-
   <main class="container">
   </main>
 </body>

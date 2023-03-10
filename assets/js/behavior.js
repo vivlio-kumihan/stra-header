@@ -1,18 +1,16 @@
 const gnavToggle = document.querySelector(".gnav_toggle")
-const gnavWapper = document.querySelector(".gnav_wapper")
-const toggleSearch = document.querySelector(".form_search dt")
-const headerSearch = document.querySelector("#header_search")
+const gnavWapper = document.querySelector(".global-nav > ul")
+const headerSearchToggle = document.querySelector(".search-icon_toggle")
+const headerSearch = document.querySelector(".search_form dd")
 
 gnavToggle.addEventListener("click", function () {
-  if (gnavWapper.classList.contains("active")) {
-    this.textContent = "menu"
-  } else {
-    this.textContent = "close"
-  }
+  console.log(gnavToggle)
+  console.log(gnavWapper)
   gnavWapper.classList.toggle("active")
 })
 
-toggleSearch.addEventListener("click", () => {
+headerSearchToggle.addEventListener("click", () => {
+  console.log(headerSearchToggle)
+  console.log(headerSearch)
   headerSearch.classList.toggle("active")
-  headerSearch.setAttribute("placeholder", "サイト内検索")
 })

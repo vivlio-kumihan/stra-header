@@ -13,81 +13,50 @@ body {
 #site-header {
   position: relative;
 
-  background-color: rgb(120, 255, 200);
+  background-color: #def7ff;
 }
 
-#site-header > .container {
-  max-width: 70rem;
-  /* 1050px */
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@media screen and (max-width: 599px) {
-  #site-header > .container {
-    padding: 1rem;
-  }
-}
-.site-header_wapper,
-.site-header_start,
-.form_search>dl,
-.global-nav,
-.gnav_wapper {
+#site-header .container,
+#site-header ul,
+#site-header dl,
+#site-header .right-block {
   display: flex;
   align-items: center;
 }
 
-.site-header_wapper {
+#site-header .container {
   justify-content: space-between;
+
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.brand-image {
-  font-size: 1.3rem;
-  font-family: 'Anton', sans-serif;
+#header_top {
+  background-color: #6adaff;
 }
 
-#header_search {
-  margin-left: 1rem;
-  padding: .5em 1rem;
-  width: 100%;
-  background-color: #fff;
+#site-header li:not(:first-of-type) {
+  margin-left: 2rem;
+}
+
+#site-header .brand {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #777;
+}
+
+#site-header .more-info {
+  padding: .5rem 1rem;
+  color: #fff;
+  background-color: orange;
   border-radius: .3rem;
 }
 
-#header_search::placeholder {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  color: #777;
-}
-
-@media screen and (max-width: 599px) {
-  .form_search dt::before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 9rem;
-
-    content: "\f002";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #555;
-  }
-
-  #header_search {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    
-    margin-left: 0;
-    height: 3rem;
-    transition: .3s;
-  }
-  #header_search.active {
-    left: 0;
-
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, .9);
-  }
+#site-header .more-info:hover {
+  color: rgb(150, 95, 0);
+  opacity: .7;
 }
 
 .gnav_toggle {
@@ -97,121 +66,159 @@ body {
 @media screen and (max-width: 599px) {
   .gnav_toggle {
     display: block;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1rem;
-
     padding: .5rem .75rem;
-    font-size: .75rem;
+    font-size: .9rem;
     font-weight: 900;
-    text-transform: uppercase;
     color: #fff;
-    background-color: rgb(70, 70, 255);
+    background-color: orange;
     border-radius: .3rem;
-    z-index: 100;
+    text-transform: uppercase;
   }
 }
 
-.nav_link {
-  position: relative;
-
+#site-header a {
   display: block;
 
-  padding: 3rem 1.5rem 1rem;
+  padding: 1.5rem 0;
   font-family: 'Open Sans', sans-serif;
-  font-size: .9rem;
-  font-weight: 800;
+  font-size: .85rem;
+  font-weight: 700;
   text-transform: uppercase;
+  color: #777;
 }
 
-.gnav_wapper>li {
-  border-right: 1px solid #333;
+#site-header .nav_item > .icon {
+  position: relative;
+
+  /* なんで0.5rem　高さが足りないのか分からない。 */
+  padding: 2.5rem 0 1rem;
 }
 
-.gnav_wapper>li:first-of-type {
-  border-left: 1px solid #333;
-}
-
-.nav_link::before {
+#site-header .nav_item > .icon::before {
   position: absolute;
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#site-header .icon::before {
   font-family: "Font Awesome 6 Free";
   font-size: 1.3rem;
   font-weight: 900;
+  color: #22cafd;
 }
 
-.nav_link.home::before {
-  content: "\f015";
-}
-
-.nav_link.network::before {
-  content: "\e533";
-}
-
-.nav_link.jobs::before {
-  content: "\f0b1";
-}
-
-.nav_link.messages::before {
-  content: "\f086";
-}
-
-.nav_link.nofitication::before {
-  content: "\f0f3";
-}
-
-.nav_link:hover::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-
-  width: 100%;
-  border-bottom: 5px solid #333;
-}
+#site-header .icon.home::before { content: "\f015"; }
+#site-header .icon.about::before { content: "\f007"; }
+#site-header .icon.service::before { content: "\f4c4"; }
+#site-header .icon.works::before { content: "\f0b1"; }
+#site-header .icon.contact::before { content: "\f14d"; }
+#site-header .icon.cart::before { content: "\f07a"; }
+#site-header .icon.member-page::before { content: "\e533"; }
+/* login => f0c0 */
 
 @media screen and (max-width: 599px) {
-  .gnav_wapper {
+  #header_bottom {
+    position: relative;
+  }
+
+  .gnav_toggle {
+    display: block;
+  }
+
+  .global-nav > ul {
     flex-direction: column;
     align-items: flex-start;
 
     position: absolute;
-    top: 100%;
-    transform: translateY(-100%);
+    top: -8rem;
     left: 0;
+    z-index: -1;
 
     width: 100%;
-    background-color: rgb(185, 255, 230);
-    z-index: -1;
-    transition: .3s;
-    
-  }
-  .gnav_wapper.active {
-    transform: translateY(0);
+    background-color: #aeeafe;
+    transition: .5s;
+    opacity: 0;
   }
 
-  .gnav_wapper > li,
-  .gnav_wapper > li:first-of-type {
-    border: 0;
+  .global-nav > ul.active {
+    top: 4.5rem;
+    left: 0;
+    opacity: 1;
   }
 
-  .nav_link {
-    padding: 1rem 0 1rem 3rem;
-  }
-  .nav_link::before {
-    top: 50%;
-    transform: translateY(-50%);
-    left: 1rem;
+  #site-header .global-nav li {
+    width: 100%;
+    margin-left: 0;
   }
   
-  .nav_link:hover::after {
-    top: 0;
+  #site-header .global-nav li:not(:first-of-type) {
+    border-top: 1px dotted #fff;
+  }
+
+  #site-header .nav_item > .icon {
+    margin-left: 4rem;
+    padding: 1rem 0;
+  }
+
+  #site-header .nav_item > .icon::before {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2rem;
+  }
+}
+
+.search_form {
+  margin-right: 2rem;
+}
+
+.search_form > dl {
+  flex-direction: row-reverse;
+}
+
+.search_form .search-icon_toggle::before {
+  padding: .5rem 0 .5rem 1rem;
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #22cafd;
+}
+
+#header-search_input {
+  padding: .75rem;
+  background-color: #fff;
+  border-radius: .3rem;
+}
+
+.search_form dd {
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.search_form dd.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 599px) {
+  .search_form dd {
+    position: absolute;
+    top: 4.5rem;
+    left: -100%;
+    
+    width: 100%;
+  }
+  .search_form dd.active {
     left: 0;
-    border: 0;
-    border-left: 5px solid #333;
+  }
+
+  #header-search_input {
+    padding: 1.75rem;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px dotted #555;
+    opacity: .9;
   }
 }
